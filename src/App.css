@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 450px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  color: #263238;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4776e6;
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4776e6;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #345bc0;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+article {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f2f6ff;
+  border-radius: 12px;
+  line-height: 2;
+}
+
+article h2 {
+  color: #345bc0;
+  margin-bottom: 10px;
+}
+
+[role="alert"] {
+  color: #d32f2f;
+  margin-top: 15px;
+}
+
+@media (max-width: 400px) {
+  section {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.forecast-section {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.forecast-section h2 {
+  color: #263238;
+  margin-bottom: 8px;
+}
+
+.forecast-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.forecast-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.forecast-card {
+  background: #f2f6ff;
+  padding: 15px 5px;
+  border-radius: 12px;
+}
+
+.forecast-card h3 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.forecast-icon {
+  font-size: 25px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.forecast-card p {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.forecast-card strong {
+  color: #345bc0;
+  font-size: 17px;
+}
+
+.forecast-note {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .forecast-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
